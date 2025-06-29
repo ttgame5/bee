@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans Tamil', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+}
+
+.game-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    color: #0056b3;
+}
+
+h2 {
+    color: #007bff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 2rem;
+}
+
+.setup-container, .timer-controls {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#timer-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100px;
+    text-align: center;
+}
+
+button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-family: 'Noto Sans Tamil', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#stop-btn {
+    background-color: #dc3545;
+}
+#stop-btn:hover {
+    background-color: #c82333;
+}
+
+#pause-btn {
+    background-color: #ffc107;
+}
+#pause-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Style for the dynamically added button */
+#show-clues-btn {
+    background-color: #28a745;
+}
+#show-clues-btn:hover {
+    background-color: #218838;
+}
+
+.timer-controls {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.timer {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.controls, .results-controls {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    gap: 10px;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.keywords-display {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.keyword-card {
+    background: #e9ecef;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.results-display .result-item {
+    background: #f8f9fa;
+    border-left: 5px solid #007bff;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.result-item p {
+    margin: 0.5rem 0;
+}
+
+.result-item .keyword {
+    font-weight: bold;
+    color: #0056b3;
+    font-size: 1.2rem;
+}
+
+.result-item .clues {
+    color: #555;
+}
+
+#new-game-btn {
+    background-color: #6c757d;
+}
+#new-game-btn:hover {
+    background-color: #5a6268;
+}

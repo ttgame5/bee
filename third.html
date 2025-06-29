@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil Theni</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .controls-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+        }
+        .controls-row label {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .controls-row select,
+        .controls-row input[type="number"] {
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            outline: none;
+        }
+        .controls-row button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #start-game-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        #start-game-btn:hover {
+            background-color: #218838;
+        }
+        #stop-game-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+        #stop-game-btn:hover {
+            background-color: #c82333;
+        }
+
+
+        #timer-display {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #d9534f; /* Red color for timer */
+        }
+
+        #word-display {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px 0;
+            min-height: 150px;
+            width: 350px; /* Slightly wider */
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #word-display p {
+            margin: 5px 0;
+            font-size: 1.8em; /* Larger font for words */
+            color: #555;
+            font-weight: bold;
+        }
+        .navigation-buttons button {
+            background-color: #007bff;
+            color: white;
+        }
+        .navigation-buttons button:hover:not(:disabled) {
+            background-color: #0056b3;
+        }
+        .navigation-buttons button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        /* Initial display states */
+        #game-screen {
+            display: none; /* Hidden by default */
+        }
+    </style>
+</head>
+<body>
+    <h1>Tamil Theni</h1>
+
+    <div id="setup-screen" class="container">
+        <div class="controls-row">
+            <label for="csv-select">Select Word List (CSV File):</label>
+            <select id="csv-select">
+                <option value="theni_2025.csv">Theni 2025 (theni_2025.csv)</option>
+                <option value="theni_2024.csv">Theni 2024 (theni_2024.csv)</option>
+                <option value="list2.csv">List 2 (list2.csv)</option>
+                </select>
+        </div>
+        <div class="controls-row">
+            <label for="timer-duration">Timer Duration (seconds):</label>
+            <input type="number" id="timer-duration" value="30" min="5">
+        </div>
+        <div class="controls-row">
+            <button id="start-game-btn">Start Game</button>
+        </div>
+    </div>
+
+    <div id="game-screen" class="container">
+        <div class="controls-row">
+            <button id="stop-game-btn">Stop Game</button>
+        </div>
+        <div id="timer-display"></div>
+        <div id="word-display">
+            </div>
+        <div class="navigation-buttons controls-row">
+            <button id="prev-btn">Previous</button>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+
+    <script src="third.js"></script>
+</body>
+</html>
