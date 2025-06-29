@@ -23,7 +23,7 @@ const alarmSound = new Audio();
 // IMPORTANT: Update this path to your actual sound file (e.g., 'alarm.mp3', 'alarm.wav')
 // Make sure the audio file is in the same directory as your HTML/JS, or provide a full path.
 // If you don't have an audio file, you can comment out the alarm related lines or set alarmSound.src = '';
-alarmSound.src = 'your_alarm_sound.mp3'; // <--- CHANGE THIS TO YOUR SOUND FILE
+alarmSound.src = 'timer_tick.mp3'; // <--- CHANGE THIS TO YOUR SOUND FILE
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
