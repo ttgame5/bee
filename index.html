@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>தமிழ் வார்த்தை விளையாட்டு</h1>
+
+        <div class="setup-container" id="setup-container">
+            <label for="timer-input">நேரத்தை நொடிகளில் அமைக்கவும்:</label>
+            <input type="number" id="timer-input" value="30" min="5">
+            <button id="start-setup-btn">விளையாட்டைத் தொடங்கு</button>
+        </div>
+
+        <div class="main-game" id="main-game" style="display: none;">
+            <div class="timer-controls">
+                <div class="timer" id="timer-display">00:00</div>
+                <div class="controls">
+                    <button id="pause-btn">இடைநிறுத்து</button>
+                    <button id="stop-btn">நிறுத்து</button>
+                </div>
+            </div>
+
+            <h2>இந்த வார்த்தைகளைக் கண்டறியவும்:</h2>
+            <div class="keywords-display" id="keywords-display">
+                </div>
+        </div>
+
+
+        <div class="results-container" id="results-container" style="display: none;">
+            <h2>முடிவுகள்</h2>
+            <div id="results-display">
+                </div>
+            <div class="results-controls">
+                <button id="continue-btn">அடுத்த சுற்று</button>
+                <button id="new-game-btn">புதிய விளையாட்டு</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
